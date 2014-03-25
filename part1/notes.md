@@ -7,7 +7,9 @@ Managing the R Workspace
 # get the current workspace directory <br>
 getwd()
 # set the workspace directory, case sensitive
-setwd() 
+setwd()
+# create a directory 
+dir.create(foldername) 
 # run R script
 source('file.R') 
 # print the output to console
