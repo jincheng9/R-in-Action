@@ -17,6 +17,12 @@ Print the output to console
 ```R
 source('file.R', print.eval=TRUE)
 ```
+or use print() to print anything you want to print to the console, for example <br>
+```R
+a <- 2
+print(a)
+```
+
 Print all commands to console
 ------------------------------
 ```R
