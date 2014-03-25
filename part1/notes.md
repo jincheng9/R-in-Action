@@ -28,3 +28,9 @@ Print all commands to console
 ```R
 source('file.R', echo=TRUE)
 ```
+Get the type of variables
+------------------------------
+```R
+a <- c(1, 2)
+class(a)
+```
