@@ -35,7 +35,8 @@ Run R Script in Windows CMD Prompt
 R.exe CMD BATCH filename.R
 Rscript.exe filename.R
 ```
-We need to specify the path of R.exe, Rscript.exe and the R file 
+We need to specify the path of R.exe, Rscript.exe and the R file. In the Windows CMD prompt,
+the quote mark is not essential for the exe and R file.
 ```R
 D:\Program Files\R\R-3.0.3\bin>"R.exe" CMD BATCH C:\Users\NDSL3\Dropbox\GitHub\R
 -in-Action\part1\code\infant_age_weight.R
