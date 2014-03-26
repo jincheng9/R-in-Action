@@ -138,3 +138,22 @@ mylist[[2]]
 mylist[['ages']]
 mylist[[2]][1] # 25, the first element of the second element in list
 ```
+A note for programmers
+-----------------------------
+1. The period(.) has no special significance in object names. But the 
+dollar sign($) has a somewhat analogous meaning, identifying the parts of an object.
+For example, A$x refers to variable x in data fram A
+2. R doesn't provide multiline or block comments. You must start each line of a 
+multiline comment with #.
+3. Assigning a value to a nonexistent element of a vector, matrix, array, or list 
+will expand that structure to accommodate the new value. For example, consider the following:
+```R
+> x <- c(8, 6, 4)
+> x[7] <- 10
+> x
+[1] 8 6 4 NA NA NA 10
+```
+x < x[1:3] would shrink it back to three elements again.
+4. R doesn't have scalar values. Scalars are represented as one-element assignment.
+5. Indices in R start at 1, not at 0.
+6. Variables cann't be declared. They come into existence on first assignment.
