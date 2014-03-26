@@ -154,6 +154,7 @@ will expand that structure to accommodate the new value. For example, consider t
 [1] 8 6 4 NA NA NA 10
 ```
 x <- x[1:3] would shrink it back to three elements again.
+
 4. R doesn't have scalar values. Scalars are represented as one-element assignment.
 5. Indices in R start at 1, not at 0.
 6. Variables cann't be declared. They come into existence on first assignment.
