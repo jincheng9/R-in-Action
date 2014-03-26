@@ -4,7 +4,7 @@ Part 1 Getting Started
 Managing the R Workspace
 ------------------
 ```R
-# get the current workspace directory <br>
+# get the current workspace directory 
 getwd()
 # set the workspace directory, case sensitive
 setwd()
@@ -13,8 +13,8 @@ dir.create(foldername)
 # run R script
 source('file.R') 
 # print the output to console
-source('file.R', print.eval=TRUE) <br>
-or use print() to print anything you want to print to the console, for example <br>
+source('file.R', print.eval=TRUE) 
+# or use print() to print anything you want to print to the console, for example 
 a <- 2
 print(a)
 # print all commands to console
