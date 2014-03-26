@@ -51,14 +51,14 @@ n\part1\code\infant_age_weight.R"
 ```
 Data Structure
 ------------------------------
-1. Vector: only have a single mode of data (numeric, character, etc.) 
+Vector: only have a single mode of data (numeric, character, etc.) 
 ```R
 a <- c(1, 2, 5, 3, 6, -2, 4)
 a[3]  # 5
 a[c(1, 3, 5)] # 1 5 6
 a[2:6] # 2 5 3 6 -2
 ```
-2. Matrix: two dimensional array
+Matrix: two dimensional array
 ```R
 cells <- c(1, 26, 24, 68)
 rnames <- c('R1', 'R2')
@@ -76,7 +76,7 @@ x[,2]
 x[1,4]
 x[1,c(4,5)]
 ```
-3. Array: Similar to matrix, but can have more than two dimensions
+Array: Similar to matrix, but can have more than two dimensions
 ```R
 dim1 <- c('A1','A2')
 dim2 <- c('B1', 'B2', 'B3')
@@ -84,7 +84,7 @@ dim3 <- c('C1', 'C2', 'C3', 'C4')
 z <- array(1:24, c(2,3,4), dimnames=list(dim1, dim2, dim3))
 z[1,2,3]
 ```
-4. Data Frame: Different columns can have different modes of data (numeric, character, etc.)
+Data Frame: Different columns can have different modes of data (numeric, character, etc.)
 ```R
 patientID <- c(1, 2, 3, 4)
 age <- c(25, 34, 28, 52)
@@ -106,7 +106,7 @@ summary(mpg)
   plot(mpg, wt)
 detach(mtcars) # remove the data frame from the search path
 ```
-5. Factor: Categorical (nomial) and Categorical ordered (ordinal) variables
+Factor: Categorical (nomial) and Categorical ordered (ordinal) variables
 ```R
 # map categorical values as a vector of integers [1...k]
 diabetes <- c('Type1', 'Type2', 'Type1', 'Type1')
@@ -126,7 +126,7 @@ patientdata <- data.frame(patientID, age, diabetes, status)
 str(patientdata)
 summary(patientdata)
 ```
-6. List: ordered collections of objects
+List: ordered collections of objects
 ```R
 g <- 'My First List'
 h <- c(25, 26, 18, 39)
