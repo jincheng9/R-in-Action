@@ -28,7 +28,7 @@ Common Mistakes in R
 1. Using the wrong case--R is case sensitive
 2. Forgetting to use quote marks
 3. Forgetting to include the parentheses in a function call
-4. Using the \ in a pathname on Windows--use / or \\
+4. Using the \ in a pathname on Windows--use / or \\\
 5. Using a funciton from a package that's not loaded
 
 Run R Script in Windows CMD Prompt
