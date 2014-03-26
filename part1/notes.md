@@ -49,4 +49,92 @@ n\part1\code\infant_age_weight.R"
 [1] 2.077498
 [1] 0.9075655
 ```
+Data Structure
+------------------------------
+1. Vector: only have a single mode of data (numeric, character, etc.) 
+```R
+a <- c(1, 2, 5, 3, 6, -2, 4)
+a[3]  # 5
+a[c(1, 3, 5)] # 1 5 6
+a[2:6] # 2 5 3 6 -2
+```
+2. Matrix: two dimensional array
+```R
+cells <- c(1, 26, 24, 68)
+rnames <- c('R1', 'R2')
+cnames <- c('C1', 'C2')
+# fill in the matrix by row
+mymatrix <- matrix(cells, nrow=2, ncol =2, byrow=TRUE,
+                   dimnames=list(rnames, cnames))
+# fill in the matrix by column, the default is by column
+mymatrix <- matrix(cells, nrow=2, ncol=2, byrow=FALSE,
+                   dimnames=list(rnames, cnames))
+#Using matrix subscripts
+x <- matrix(1:10, nrow=2)
+x[2,]
+x[,2]
+x[1,4]
+x[1,c(4,5)]
+```
+3. Array: Similar to matrix, but can have more than two dimensions
+```R
+dim1 <- c('A1','A2')
+dim2 <- c('B1', 'B2', 'B3')
+dim3 <- c('C1', 'C2', 'C3', 'C4')
+z <- array(1:24, c(2,3,4), dimnames=list(dim1, dim2, dim3))
+z[1,2,3]
+```
+4. Data Frame: Different columns can have different modes of data (numeric, character, etc.)
+```R
+patientID <- c(1, 2, 3, 4)
+age <- c(25, 34, 28, 52)
+diabetes <- c('Type1', 'Type2', 'Type1','Type1')
+status <- c('Poor', 'Improved', 'Excellent', 'Poor')
+patientdata <- data.frame(patientID, age, diabetes, status)
+patientdata[1:2] # first 2 columns
+patientdata[c('diabetes', 'status')]
+patientdata$age
+table(patientdata$diabetes, patientdata$status)
 
+# attach, detach, and with
+summary(mtcars$mpg)
+plot(mtcars$mpg, mtcars$disp)
+plot(mtcars$mpg, mtcars$wt)
+attach(mtcars) # add the data frame mtcars to the R search path
+summary(mpg)
+  plot(mpg, disp)
+  plot(mpg, wt)
+detach(mtcars) # remove the data frame from the search path
+```
+5. Factor: Categorical (nomial) and Categorical ordered (ordinal) variables
+```R
+# map categorical values as a vector of integers [1...k]
+diabetes <- c('Type1', 'Type2', 'Type1', 'Type1')
+diabetes <- factor(diabetes) # Type1-1 Type2-2
+status <- c('Poor', 'Improved', 'Excellent', 'Poor') 
+status <- factor(status, ordered=TRUE) # Excellent-1 Improved-2 Poor-3
+status2 <- factor(status, ordered=TRUE, levels=c('Poor', 'Improved', 'Excellent')) # Excellent-3 Improved-2 Poor-1
+
+# an example to show the factors
+patientID <- c(1, 2, 3, 4)
+age <- c(25, 34, 28, 52)
+diabetes <- c("Type1", "Type2", 'Type1', 'Type1')
+status <- c('Poor', 'Improved', 'Excellent', 'Poor')
+diabetes <- factor(diabetes)
+status <- factor(status, ordered=TRUE)
+patientdata <- data.frame(patientID, age, diabetes, status)
+str(patientdata)
+summary(patientdata)
+```
+6. List: ordered collections of objects
+```R
+g <- 'My First List'
+h <- c(25, 26, 18, 39)
+j <- matrix(1:10, nrow=5)
+k <- c('one', 'two', 'three')
+mylist <- list(title=g, ages=h, j, k)
+mylist
+mylist[[2]]
+mylist[['ages']]
+mylist[[2]][1] # 25, the first element of the second element in list
+```
