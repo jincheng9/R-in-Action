@@ -157,3 +157,14 @@ x <- x[1:3] would shrink it back to three elements again.<br>
 4. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
 5. Indices in R start at 1, not at 0. <br>
 6. Variables cann't be declared. They come into existence on first assignment.
+
+Data Input
+------------------
+1. Entering data from the keyboard
+2. Importing data from a delimited text file
+3. Importing data from Excel
+4. Importing data from XML
+5. Webscraping - importing data from web
+6. Importing data from SPSS/SAS/Stata/netCDF/HDF5
+7. Accessing RDBMS 
+8. Stat/Transfer - a commercial product that can transfer data between 34 data formats
