@@ -158,7 +158,7 @@ x <- x[1:3] would shrink it back to three elements again.<br>
 5. Indices in R start at 1, not at 0. <br>
 6. Variables cann't be declared. They come into existence on first assignment.
 
-Data Input
+Data Input Methods
 ------------------
 1. Entering data from the keyboard
 2. Importing data from a delimited text file
