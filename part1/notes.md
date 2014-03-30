@@ -201,5 +201,7 @@ plot()
 --graph and margin dimensions <br>
 
 4 Adding text, customized axes, and legends <br>
+
 5 Combining graphs in a single graph <br>
+
 
