@@ -184,13 +184,15 @@ pdf('graph2.pdf)
 plot()
 dev.off()
 ```
-2 Show multiple graphs in GUI <br>
+2 Show multiple graphs at the same time <br>
 ```R
 # the first graph
 plot()
 # the second graph
+# open a new graph window, a little similar to 'figure' in matlab
 dev.new()
-plot()
+# if there is no dev.new(), we can use previous (or left arrow), next (or right arrow) of GUI to see the two graphs separately 
+plot() 
 ```
 3 Graphical parameters <br>
 --sysmbols and lines <br>
