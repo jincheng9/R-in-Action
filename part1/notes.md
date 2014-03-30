@@ -169,3 +169,31 @@ Data Input Methods
 6. Importing data from SPSS/SAS/Stata/netCDF/HDF5
 7. Accessing RDBMS 
 8. Stat/Transfer - a commercial product that can transfer data between 34 data formats
+
+Getting started with graphs
+-----------------------------
+1. Save multiple graphs as pdf or other file formats
+```R
+# the first graph
+pdf('graph1.pdf)
+plot()
+dev.off()
+
+# the second graph
+pdf('graph2.pdf)
+plot()
+dev.off()
+```
+2. Show multiple graphs in GUI
+```R
+# the first graph
+plot()
+# the second graph
+dev.new()
+plot()
+```
+3. Graphical parameters
+--sysmbols and lines
+--colors
+--text characteristics
+--graph and margin dimensions
