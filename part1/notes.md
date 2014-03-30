@@ -51,7 +51,7 @@ n\part1\code\infant_age_weight.R"
 ```
 Data Structure
 ------------------------------
-Vector: only have a single mode of data (numeric, character, etc.) 
+Vector: only have a single mode of data (numeric, character, logical.) 
 ```R
 a <- c(1, 2, 5, 3, 6, -2, 4)
 a[3]  # 5
@@ -96,7 +96,8 @@ patientdata[c('diabetes', 'status')]
 patientdata$age
 table(patientdata$diabetes, patientdata$status)
 
-# attach, detach, and with
+# attach, detach, and with 
+# attach, detach will be bad when more than one object have the same name, use "with"
 summary(mtcars$mpg)
 plot(mtcars$mpg, mtcars$disp)
 plot(mtcars$mpg, mtcars$wt)
