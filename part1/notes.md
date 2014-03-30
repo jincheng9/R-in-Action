@@ -172,7 +172,7 @@ Data Input Methods
 
 Getting started with graphs
 -----------------------------
-1. Save multiple graphs as pdf or other file formats
+1 Save multiple graphs as pdf or other file formats
 ```R
 # the first graph
 pdf('graph1.pdf)
@@ -184,7 +184,7 @@ pdf('graph2.pdf)
 plot()
 dev.off()
 ```
-2. Show multiple graphs in GUI <br>
+2 Show multiple graphs in GUI <br>
 ```R
 # the first graph
 plot()
@@ -192,7 +192,7 @@ plot()
 dev.new()
 plot()
 ```
-3. Graphical parameters <br>
+3 Graphical parameters <br>
 --sysmbols and lines <br>
 --colors <br>
 --text characteristics <br>
