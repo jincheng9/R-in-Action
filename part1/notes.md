@@ -241,7 +241,7 @@ mydata <- data.frame(x1 = c(2, 2, 6, 4),
 
 # method 2
 mydata <- within(mydata, {
-  age <- NA
+  age <- NA # create a new variable age for data frame mydata and intialize it as NA
   age[x1==2] <- 1
   tmp <- x1*x2
 })
