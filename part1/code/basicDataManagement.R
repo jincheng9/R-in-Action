@@ -34,3 +34,6 @@ mydata <- within(mydata, {
 
 # rename
 names(mydata)[6] <- 'tmp2'
+
+# missing values
+newdata <- na.omit(mydata)
