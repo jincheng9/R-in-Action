@@ -22,6 +22,9 @@ source('file.R', echo=TRUE)
 # get the type of variables
 a <- c(1, 2)
 class(a)
+# remove variable in the workspace
+x <- c(1,2)
+rm(x)
 ```
 Common Mistakes in R
 -----------------------------
@@ -204,4 +207,49 @@ plot()
 
 5 Combining graphs in a single graph <br>
 
+Basic data management
+-------------------------------------------
+1 adding new variables to the data frame
+```R
+mydata <- data.frame(x1 = c(2, 2, 6, 4),
+                     x2 = c(3, 4, 2, 8))
+					 
+# add variables to the data frame mydata
+# gernerally we have three methods
+
+# method 1
+#mydata$sumx <-  mydata$x1 + mydata$x2
+#mydata$meanx <- (mydata$x1 + mydata$x2)/2
+
+# method 2
+#attach(mydata)
+#mydata$sumx <-  x1 + x2
+#mydata$meanx <- (x1 + x2)/2
+#detach(mydata)
+
+# method 3
+mydata <- transform(mydata, sumx = x1 + x2, meanx = (x1+x2)/2)
+```	
+2 recoding variables
+```R
+mydata <- data.frame(x1 = c(2, 2, 6, 4),
+                     x2 = c(3, 4, 2, 8))
+# recoding variables
+# method 1
+#mydata$age[mydata$x1==2] <- 1
+#mydata$tmp <- mydata$x1 * mydata$x2
+
+# method 2
+mydata <- within(mydata, {
+  age <- NA
+  age[x1==2] <- 1
+  tmp <- x1*x2
+})
+```
+3 renaming variables
+```R
+rename(dataframe, c(oldname1="newname1", oldname2="newname2",...))
+#names[dataframe] returns the variable names of the data frame as a vector
+names(dataframe)[2] <- "newname"
+```
 
