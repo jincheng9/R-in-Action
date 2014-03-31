@@ -251,5 +251,6 @@ mydata <- within(mydata, {
 rename(dataframe, c(oldname1="newname1", oldname2="newname2",...))
 #names[dataframe] returns the variable names of the data frame as a vector
 names(dataframe)[2] <- "newname"
+# or use fix(datafrmae) to rename variables in GUI
 ```
 
