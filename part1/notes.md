@@ -255,7 +255,7 @@ names(dataframe)[2] <- "newname"
 ```
 4 missing values
 ```r
-leadership@age[leadership$age==99] <- NA
+leadership$age[leadership$age==99] <- NA
 x < - c(1, 2, NA, 3)
 y <- x[1] + x[2] + x[3] + x[4] # y will be NA
 z <- sum(x) # z will be NA
