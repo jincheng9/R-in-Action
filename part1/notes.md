@@ -254,7 +254,7 @@ names(dataframe)[2] <- "newname"
 # or use fix(datafrmae) to rename variables in GUI
 ```
 4 missing values
-```r
+```{r}
 leadership$age[leadership$age==99] <- NA
 x < - c(1, 2, NA, 3)
 y <- x[1] + x[2] + x[3] + x[4] # y will be NA
