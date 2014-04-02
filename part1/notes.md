@@ -254,7 +254,7 @@ names(dataframe)[2] <- "newname"
 # or use fix(datafrmae) to rename variables in GUI
 ```
 4 missing values
-```{r}
+```r
 leadership$age[leadership$age==99] <- NA
 x < - c(1, 2, NA, 3)
 y <- x[1] + x[2] + x[3] + x[4] # y will be NA
@@ -262,3 +262,26 @@ z <- sum(x) # z will be NA
 z <- sum(x, na.rm=TRUE) # na.rm=TRUE removes the missing values
 newdata <- na.omit(leadership) # na.omit() deletes any rows with missing data
 ```
+5 Date values
+(1) store character date as a data variable
+'''R
+# x is character date
+# default input format is yyyy-mm-dd
+mydate <- as.Date(x, 'input_format')
+'''
+(2) transform  date to a specific format and to extract portions of dates
+```R
+# x is a date variable
+# default output format is yyyy-mm-dd
+mydate <- format(x, format='output_format') 
+```
+(3) calculate a time interval and express it in seconds, minutes, hours, days, or weeks, 
+```R
+# dataX and dataY are data variables
+interval <- difftime(dateX, dateY, units='weeks')
+```
+(4) Sys.Date() returns today's date and date() returns the current date and time
+
+
+
+ 
