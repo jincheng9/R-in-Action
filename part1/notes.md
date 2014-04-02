@@ -264,11 +264,11 @@ newdata <- na.omit(leadership) # na.omit() deletes any rows with missing data
 ```
 5 Date values <br>
 (1) store character date as a data variable
-'''R
+```R
 # x is character date
 # default input format is yyyy-mm-dd
 mydate <- as.Date(x, 'input_format')
-'''
+```
 (2) transform  date to a specific format and to extract portions of dates
 ```R
 # x is a date variable
