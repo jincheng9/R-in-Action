@@ -262,7 +262,7 @@ z <- sum(x) # z will be NA
 z <- sum(x, na.rm=TRUE) # na.rm=TRUE removes the missing values
 newdata <- na.omit(leadership) # na.omit() deletes any rows with missing data
 ```
-5 Date values
+5 Date values <br>
 (1) store character date as a data variable
 '''R
 # x is character date
