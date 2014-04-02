@@ -284,9 +284,23 @@ interval <- difftime(dateX, dateY, units='weeks')
 
 6 Type conversion (page 84)<br>
 is.datatype() return TRUE or FALSE <br>
-as.datatype() converts the argument to that type
+as.datatype() converts the argument to that type <br>
 
+7 Sort data frame (By default, the sorting order is ascending)
+```R
+# sort the rows from youngest to oldest
+newdata <- leadership[order(leadership$age),]
 
+# sort the rows from female to male, and from youngest to oldest within each gender
+attach(leadership)
+newdata <- leadership[order(gender, age), ]
+detach(leadership)
+
+# sort the rows from female to male, and from oldest to youngest within each gender
+attach(leadership)
+newdata <- leadership[order(gender, -age), ]
+detach(leadership)
+```
 
 
  
