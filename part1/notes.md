@@ -269,7 +269,7 @@ newdata <- na.omit(leadership) # na.omit() deletes any rows with missing data
 # default input format is yyyy-mm-dd
 mydate <- as.Date(x, 'input_format')
 ```
-(2) transform  date to a specific format and to extract portions of dates
+(2) transform date to a specific format and to extract portions of dates
 ```R
 # x is a date variable
 # default output format is yyyy-mm-dd
@@ -301,6 +301,12 @@ attach(leadership)
 newdata <- leadership[order(gender, -age), ]
 detach(leadership)
 ```
+8 Merge data sets <br>
+(1) add columns <br>
 
-
+(2) add rows <br>
+```R
+# the two data frames must have the same variables
+total <- rbind(dataframeA, dataframeB)
+``` 
  
