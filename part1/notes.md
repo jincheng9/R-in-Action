@@ -280,7 +280,12 @@ mydate <- format(x, format='output_format')
 # dataX and dataY are data variables
 interval <- difftime(dateX, dateY, units='weeks')
 ```
-(4) Sys.Date() returns today's date and date() returns the current date and time
+(4) Sys.Date() returns today's date and date() returns the current date and time <br>
+
+6 Type conversion (page 84)<br>
+is.datatype() return TRUE or FALSE <br>
+as.datatype() converts the argument to that type
+
 
 
 
