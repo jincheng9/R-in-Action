@@ -94,6 +94,8 @@ age <- c(25, 34, 28, 52)
 diabetes <- c('Type1', 'Type2', 'Type1','Type1')
 status <- c('Poor', 'Improved', 'Excellent', 'Poor')
 patientdata <- data.frame(patientID, age, diabetes, status)
+x <- nrow(patientdata)
+y <- ncol(patientdata)
 patientdata[1:2] # first 2 columns
 patientdata[c('diabetes', 'status')]
 patientdata$age
@@ -317,4 +319,57 @@ total <- cbind(dataframeA, dataframeB)
 # the two data frames must have the same variables
 total <- rbind(dataframeA, dataframeB)
 ``` 
- 
+9 Subsetting data sets <br>
+(1) Keeping variables
+```R
+c1 <- c(1, 2, 3)
+c2 <- c(4, 5, 6)
+c3 <- c(7, 8, 9)
+data <- data.frame(c1, c2, c3)
+newdata <- data[1]
+newdata <- data['c1']
+x <- c('c1', 'c2)
+newdata <- data[x]
+newdata <- data[, 1]
+newdata <- data[, 1:2]
+newdata <- data[, c(1:2)]
+newdata <- data[1,]
+newdata <- data[1:2,]
+```
+(2) Excluding variables
+```R
+# delete variables q3 and q4
+myvars <- names(leadership) %in% c('q3', 'q4')
+newdata <- leadership[!myvars]
+# delete the 8th and 9th variables
+newdata <- leadership[c(-8, -9)]
+# delete variables q3 and q4
+leadership$q3 <- leadership$q4 <- NULL
+```
+(3) Selecting observations
+```R
+newdata <- leadership[1:3,]
+newdata <- leadership[which(leadership$gender=='M' & leadership$age>30),]
+attach(leadership)
+newdata <- leadership[which(gender=='M' & age>30),]
+
+leadership$date <- as.Date(leadership$date, '%m/%d/%y')
+startdate <- as.Date('2009-01-01')
+enddate <- as.Date('2009-10-31')
+newdata <- leadership[which(leadership$date>=startdate & leadership$date<=enddate),]
+```
+(4) The subset() function
+```R
+newdata <- subset(leadership, age>=35 | age<24, select=c(q1, q2, q3, q4))
+newdata <- subset(leadership, gender=='M' | age>25, select=gender:q4)
+```
+(5) Random samples
+```R
+mysample <- leadership[sample(1:nrow(leadership), 3, replace=FALSE), ]
+```
+(6) Using SQL to manipulate data frames
+```R
+library('sqldf')
+newdf <- sq1df('select * from mtcars where carb=1 order by mpg', row.names=TRUE)
+newdf <- sqldf('select avg(mpg) as avg_mpg, avg(disp) as avg_disp, gear from mtcars where cyl in (4, 6) group by gear')
+```
