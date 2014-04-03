@@ -303,7 +303,15 @@ detach(leadership)
 ```
 8 Merge data sets <br>
 (1) add columns <br>
-
+```R
+# merge dataframeA and dataframeB by ID (inner join)
+total <- merge(dataframeA, dataframeB, by="ID")
+# merge dataframeA and dataframeB by ID and Country (inner join)
+total <- merge(dataframeA, dataframeB, by=c('ID', 'Country'))
+# horizontally concatenate dataframeA and dataframeB
+# dataframeA and dataframeB must have the same number of rows and the row order should be the same
+total <- cbind(dataframeA, dataframeB)
+```
 (2) add rows <br>
 ```R
 # the two data frames must have the same variables
