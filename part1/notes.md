@@ -395,5 +395,33 @@ Advanced data management
   apply(x, MARGIN, FUN, ...)<br> 
   x is the data object, MARGIN is the dimension index, 1 indicates rows, 2 indicates columns, FUN is a function you specify, and ... are any parameters you want to pass to FUN <br>
   
-  
- 
+2 Control flow
+- if/else, ifelse, switch
+```R
+score <- 0.6
+if (score > 0.5) {
+  outcome2 <- 'passed' 
+} else {
+  outcome2 <- 'not passed'
+}
+outcome <- ifelse(score>0.5, 'passed', 'not passed')
+switch(expr, ...)
+```
+Note: <br>
+"... When the if statement is not in a block the else, if present,
+must appear on the same line as statement1. Otherwise the new line at
+the end of statement1 yields a syntactically complete statement that
+is evaluated. ..."
+
+- for, while <br>
+  for (var in seq) statement
+```R
+for (i in 1:10) {
+  print('hello world')
+}
+i <- 10
+while(i>=0) {
+  print('hello world')
+  i <- i-1
+}
+```
