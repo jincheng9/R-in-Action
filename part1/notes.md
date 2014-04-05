@@ -380,7 +380,7 @@ Advanced data management
 - Mathematical functions <br>
   sqrt(x), floor(x), log(x), exp(x) <br>
 - Statistical functions <br>
-  mean(x), median(x), sd(x), var(x), rang(x), sum(x), scale(x, center=TRUE, scale=TRUE)<br>
+  mean(x), median(x), sd(x), var(x), rang(x), sum(x), scale(x, center=TRUE, scale=TRUE)
 - Probability functions <br>
 
  
