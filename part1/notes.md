@@ -426,8 +426,26 @@ while(i>=0) {
   i <- i-1
 }
 ```
-3 User-defined functions
-myfunction <- function(arg1, arg2, ...) {
-	statements
-	return(object)
+3 User-defined functions <br>
+myfunction <- function(arg1, arg2, ...) { <br>
+	statements <br>
+	return(object) <br>
 }
+```R
+mystats <- function(x, parametric=TRUE, print=FALSE) {
+  if (parametric) {
+    center <- mean(x)
+    spread <- sd(x)
+  } else {
+    center <- median(x)
+    spread <- mad(x)
+  }
+  if(print&parametric) {
+    cat('Mean=', center, '\n', 'SD=', spread, '\n')
+  } else if(print&!parametric){
+    cat('Median=', center, '\n', 'MAD=', spread, '\n')
+  }
+  result <- list(center = center, spread=spread)
+  return(result)
+}
+```
