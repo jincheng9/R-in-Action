@@ -414,7 +414,8 @@ the end of statement1 yields a syntactically complete statement that
 is evaluated. ..."
 
 - for, while <br>
-  for (var in seq) statement
+  for (var in seq) statement <br>
+  while (cond) statement
 ```R
 for (i in 1:10) {
   print('hello world')
