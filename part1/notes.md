@@ -392,6 +392,8 @@ Advanced data management
 - Other useful functions<br>
   length(x), seq(from, to, by), rep(x, n), cut(x, n), pretty(x, n), cat(.., file='myfile', append=FALSE)
 - Apply functions to matrices and data frames<br>
+  apply(x, MARGIN, FUN, ...)<br> 
+  x is the data object, MARGIN is the dimension index, 1 indicates rows, 2 indicates columns, FUN is a function you specify, and ... are any parameters you want to pass to FUN <br>
   
   
  
