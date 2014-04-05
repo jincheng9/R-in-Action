@@ -455,5 +455,5 @@ x is the data objec to be collaplsed, by is a list of variables that will be cro
 new observations, and FUN is the scalar function used to calculate summary statistics that will 
 make up the new observation values.
 - reshape <br>
-install.packages('reshape') <br>
+install.packages('reshape'), library('reshape') <br>
 melt(data, id=(c('id', 'time'))), cast(md, id~variable, mean)
