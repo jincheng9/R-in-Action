@@ -379,19 +379,19 @@ Advanced data management
 1 Numerical and character functions <br>
 - Mathematical functions <br>
   sqrt(x), floor(x), log(x), exp(x)
-- Statistical functions 
+- Statistical functions <br>
   mean(x), median(x), sd(x), var(x), range(x), sum(x), scale(x, center=TRUE, scale=TRUE)
-- Probability functions (page 96)
+- Probability functions (page 96)<br>
   [dpqr]distribution_abbrebiation (d=density, p=distribution function, q=quantile function, r=random generation)<br> 
    runif(): uniform distribution on the interval 0 to 1 <br>
    set.seed(5): set seed to make the results reproducible
-- Character functions
+- Character functions<br>
   nchar(x), substr(x, start, stop), grep(pattern, x, ignore.case=FALSE, fixed=FALSE) <br>
   sub(pattern, replacement, x, ignore.case=FALSE, fixed=FALSE), strsplit(x, split, fixed=FALSE) <br>
   paste(..., sep=""), toupper(x), tolower(x)
-- Other useful functions
+- Other useful functions<br>
   length(x), seq(from, to, by), rep(x, n), cut(x, n), pretty(x, n), cat(.., file='myfile', append=FALSE)
-- Apply functions to matrices and data frames
+- Apply functions to matrices and data frames<br>
   
   
  
