@@ -428,7 +428,7 @@ while(i>=0) {
 ```
 3 User-defined functions <br>
 myfunction <- function(arg1, arg2, ...) { <br>
-	statements <br>
+~~~~	statements <br>
 	return(object) <br>
 }
 ```R
