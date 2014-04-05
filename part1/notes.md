@@ -426,3 +426,8 @@ while(i>=0) {
   i <- i-1
 }
 ```
+3 User-defined functions
+myfunction <- function(arg1, arg2, ...) {
+	statements
+	return(object)
+}
