@@ -373,3 +373,14 @@ library('sqldf')
 newdf <- sq1df('select * from mtcars where carb=1 order by mpg', row.names=TRUE)
 newdf <- sqldf('select avg(mpg) as avg_mpg, avg(disp) as avg_disp, gear from mtcars where cyl in (4, 6) group by gear')
 ```
+
+Advanced data management
+-------------------------------
+1 Numerical and character functions <br>
+- Mathematical functions <br>
+  sqrt(x), floor(x), log(x), exp(x) <br>
+- Statistical functions <br>
+  mean(x), median(x), sd(x), var(x), rang(x), sum(x), scale(x, center=TRUE, scale=TRUE)<br>
+- Probability functions <br>
+
+ 
