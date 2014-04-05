@@ -449,3 +449,11 @@ mystats <- function(x, parametric=TRUE, print=FALSE) {
   return(result)
 }
 ```
+4 Aggregation and restructuring <br>
+- aggregate(x, by, FUN) <br>
+x is the data objec to be collaplsed, by is a list of variables that will be crossed to form the 
+new observations, and FUN is the scalar function used to calculate summary statistics that will 
+make up the new observation values.
+- reshape <br>
+install.packages('reshape') <br>
+melt(data, id=(c('id', 'time'))), cast(md, id~variable, mean)
