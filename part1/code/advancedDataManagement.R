@@ -1,5 +1,10 @@
 for (i in 1:10) {
-  print('hello world')
+  if (i<5) {
+    print('hello')
+  }
+  else {
+    print('world')
+  }
 }
 i <- 10
 while(i>=0) {
