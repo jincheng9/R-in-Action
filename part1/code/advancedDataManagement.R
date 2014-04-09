@@ -54,3 +54,12 @@ mydate <- function(type='long') {
          short = format(Sys.time(), '%m-%d-%Y'),
          cat(type, 'is not a recognized type\n'))
 }
+
+i <- 10
+if (i <10) {
+  print('i<10')
+} else if(i==10) {
+  print('i==10')
+} else{
+  print('i>10')
+}
