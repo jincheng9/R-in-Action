@@ -19,6 +19,18 @@ a <- 2
 print(a)
 # print all commands to console
 source('file.R', echo=TRUE)
+# print characters and integers
+i <- 10
+cat(i, "th interation...\n", sep="") # sep="" means that there is no space between the input parameters 
+# check the data structure of variables
+vec <- c(1:10)
+head(vec)
+tail(vec)
+no <- c(1:3)
+grade <- c(89, 95, 100)
+data <- data.frame(no, grade)
+head(data)
+tail(data)
 # get the type of variables
 a <- c(1, 2)
 class(a)
@@ -101,6 +113,7 @@ patientdata[c('diabetes', 'status')]
 patientdata$age
 table(patientdata$diabetes, patientdata$status)
 
+# 
 # attach, detach, and with 
 # attach, detach will be bad when more than one object have the same name, use "with"
 summary(mtcars$mpg)
@@ -283,6 +296,13 @@ mydate <- format(x, format='output_format')
 interval <- difftime(dateX, dateY, units='weeks')
 ```
 (4) Sys.Date() returns today's date and date() returns the current date and time <br>
+```R
+# record the running time of a program
+t1 <- proc.time()
+code 
+t2 <- proc.time()
+time_elapsed <- as.numeric((t2-t1)[3])
+```
 
 6 Type conversion (page 84)<br>
 is.datatype() return TRUE or FALSE <br>
