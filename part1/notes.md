@@ -37,6 +37,8 @@ class(a)
 # remove variable in the workspace
 x <- c(1,2)
 rm(x)
+# remove all variables in the workspace
+rm(list=ls(all=T))
 ```
 Common Mistakes in R
 -----------------------------
