@@ -72,6 +72,18 @@ a <- c(1, 2, 5, 3, 6, -2, 4)
 a[3]  # 5
 a[c(1, 3, 5)] # 1 5 6
 a[2:6] # 2 5 3 6 -2
+# add a element to vector: method 1
+e <- 10
+a <- c(a, e)
+# add a element to vector: method 2
+a <- append(a, e)
+# add a element to vector: method 3
+a[length(a)+1] <- e
+# delete a element of a vector
+index <- 2
+a <- a[-index] # delete the 2nd element of vector a
+index <- c(2, 5)
+a <- a[-index] # delete the 2nd and 5th element of vector a
 ```
 Matrix: two dimensional array
 ```R
@@ -112,7 +124,20 @@ patientdata[1:2] # first 2 columns
 patientdata[c('diabetes', 'status')]
 patientdata$age
 table(patientdata$diabetes, patientdata$status)
-
+# add a column to data.frame: method 1
+patientdata$new_col <- c(2:5)
+# add a column to data.frame: method 2
+patientdata <- transform(patientdata, new_col=c(2:5))
+# add a row to data.frame
+new_row <- data.frame(patientID=5, age=10, diabetes='Type3', status='Good')
+patientdata <- rbind(patientdata, new_row)
+# delete a column of data.frame: method 1
+patientdata$new_col <- NULL
+# delete a column of data.frame: method 2
+patientdata <- transform(patientdata, new_col=NULL)
+# delete a specific row of a data.frame
+index <- 2
+patientdata <- patientdata[-index, ]
 # 
 # attach, detach, and with 
 # attach, detach will be bad when more than one object have the same name, use "with"
