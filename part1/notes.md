@@ -74,6 +74,9 @@ a <- c(1, 2, 5, 3, 6, -2, 4)
 a[3]  # 5
 a[c(1, 3, 5)] # 1 5 6
 a[2:6] # 2 5 3 6 -2
+b <- replicate(10, 2) # generate a vector with length 10, all elements are 2
+b <- rep(2, 10) # generate a vector with length 10, all elements are 2
+
 # add a element to vector: method 1
 e <- 10
 a <- c(a, e)
@@ -86,6 +89,16 @@ index <- 2
 a <- a[-index] # delete the 2nd element of vector a
 index <- c(2, 5)
 a <- a[-index] # delete the 2nd and 5th element of vector a
+# find the index of a element
+vec <- c(2:10)
+e <- 3
+e2 <- c(3, 5)
+index <- match(e, vec)
+index2 <- match(e2, vec)
+# check if an element is in a vector
+e3 <- 1
+is_in <- !is.na(match(e3, vec))
+is_in <- e3 %in% vec
 ```
 Matrix: two dimensional array
 ```R
@@ -122,6 +135,13 @@ status <- c('Poor', 'Improved', 'Excellent', 'Poor')
 patientdata <- data.frame(patientID, age, diabetes, status)
 x <- nrow(patientdata)
 y <- ncol(patientdata)
+# get the ij-th element of a data.frame
+i <- 1
+j <- 2
+patientdata[[j]][i]
+patientdata[, j][i]
+patientdata$age[i]
+
 patientdata[1:2] # first 2 columns
 patientdata[c('diabetes', 'status')]
 patientdata$age
@@ -467,6 +487,11 @@ is evaluated. ..."
 for (i in 1:10) {
   print('hello world')
 }
+# pay attention to the following example, it will print 1 and 0
+for (i in 1:0) {
+	print(i)
+}
+
 i <- 10
 while(i>=0) {
   print('hello world')
