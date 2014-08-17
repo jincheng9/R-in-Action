@@ -76,7 +76,8 @@ a[c(1, 3, 5)] # 1 5 6
 a[2:6] # 2 5 3 6 -2
 b <- replicate(10, 2) # generate a vector with length 10, all elements are 2
 b <- rep(2, 10) # generate a vector with length 10, all elements are 2
-
+b <- seq(1,10) # b is 1, 2, 3, 4, 5, 6, 7, 8, 9 10
+b <- seq(1, 10, 2) # b is 1, 3, 5, 7, 9
 # add a element to vector: method 1
 e <- 10
 a <- c(a, e)
