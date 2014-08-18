@@ -252,7 +252,7 @@ pdf('graph2.pdf)
 plot()
 dev.off()
 ```
-4 Plot two lines in a single graph
+2 Plot two lines in a single graph
 ```R
 x <- c(1:5)
 y1 <- 2*x
