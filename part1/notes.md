@@ -252,7 +252,15 @@ pdf('graph2.pdf)
 plot()
 dev.off()
 ```
-2 Show multiple graphs at the same time <br>
+4 Plot two lines in a single graph
+```R
+x <- c(1:5)
+y1 <- 2*x
+y2 <- 3*x
+plot(x, y1, type='l', col='red')
+lines(x, y2, type='l', col='green')
+```
+3 Show multiple graphs at the same time <br>
 ```R
 # the first graph
 plot()
