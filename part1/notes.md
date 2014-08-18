@@ -90,7 +90,7 @@ index <- 2
 a <- a[-index] # delete the 2nd element of vector a
 index <- c(2, 5)
 a <- a[-index] # delete the 2nd and 5th element of vector a
-# find the index of a element
+# find the first-matched index of a element
 vec <- c(2:10)
 e <- 3
 e2 <- c(3, 5)
