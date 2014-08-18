@@ -270,15 +270,15 @@ dev.new()
 # if there is no dev.new(), we can use previous (or left arrow), next (or right arrow) of GUI to see the two graphs separately 
 plot() 
 ```
-3 Graphical parameters <br>
+4 Graphical parameters <br>
 --sysmbols and lines <br>
 --colors <br>
 --text characteristics <br>
 --graph and margin dimensions <br>
 
-4 Adding text, customized axes, and legends <br>
+5 Adding text, customized axes, and legends <br>
 
-5 Combining graphs in a single graph <br>
+6 Combining graphs in a single graph <br>
 
 Basic data management
 -------------------------------------------
