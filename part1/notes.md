@@ -255,12 +255,12 @@ Getting started with graphs
 1 Save multiple graphs as pdf or other file formats
 ```R
 # the first graph
-pdf('graph1.pdf)
+pdf('graph1.pdf')
 plot()
 dev.off()
 
 # the second graph
-pdf('graph2.pdf)
+pdf('graph2.pdf')
 plot()
 dev.off()
 ```
@@ -269,7 +269,7 @@ dev.off()
 x <- c(1:5)
 y1 <- 2*x
 y2 <- 3*x
-plot(x, y1, type='l', col='red')
+plot(x, y1, type='l', col='red', xlab='day', ylab='Net Value')
 lines(x, y2, type='l', col='green')
 ```
 3 Show multiple graphs at the same time <br>
