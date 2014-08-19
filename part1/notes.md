@@ -236,7 +236,7 @@ Data Input Methods
 # read csv data
 signal <- read.table(fileDir, header=FALSE, sep=',')
 # export data as csv format
-return <- write.table(data, 'data.csv', col.names=F, sep=',')
+write.table(data, 'data.csv', col.names=F, sep=',')
 ```
 3 Importing data from Excel
 
