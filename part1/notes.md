@@ -283,7 +283,7 @@ dev.new()
 plot() 
 ```
 4 Graphical parameters <br>
---sysmbols and lines <br>
+--symbols and lines <br>
 --colors <br>
 --text characteristics <br>
 --graph and margin dimensions <br>
