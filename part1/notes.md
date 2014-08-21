@@ -272,8 +272,8 @@ y2 <- 3*x
 plot(x, y1, type='l', col='red', xlab='day', ylab='Net Value')
 lines(x, y2, type='l', col='green')
 
-# label each line using legend() function
-legend('topleft', legend=c('line 1', 'line 2'), col=c('red', 'green'), lwd=1)
+# label each line using legend() function, lwd is line width, bty='n' means no borders for the legends
+legend('topleft', legend=c('line 1', 'line 2'), col=c('red', 'green'), lwd=1, bty='n') 
 ```
 
 3 Show multiple graphs at the same time <br>
