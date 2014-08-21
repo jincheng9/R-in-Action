@@ -453,6 +453,9 @@ leadership$date <- as.Date(leadership$date, '%m/%d/%y')
 startdate <- as.Date('2009-01-01')
 enddate <- as.Date('2009-10-31')
 newdata <- leadership[which(leadership$date>=startdate & leadership$date<=enddate),]
+
+# use package dplyr
+newdata <- filter(leadership, gender=='M' & age>30)
 ```
 (4) The subset() function
 ```R
