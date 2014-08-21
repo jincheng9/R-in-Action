@@ -141,6 +141,7 @@ y <- ncol(patientdata)
 # get the ij-th element of a data.frame
 i <- 1
 j <- 2
+patientdata[i, j]
 patientdata[[j]][i]
 patientdata[, j][i]
 patientdata$age[i]
