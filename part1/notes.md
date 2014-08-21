@@ -211,7 +211,7 @@ A note for programmers
 -----------------------------
 1. The period(.) has no special significance in object names. But the 
 dollar sign($) has a somewhat analogous meaning, identifying the parts of an object.
-For example, A$x refers to variable x in data fram A
+For example, A$x refers to variable x in data frame A
 2. R doesn't provide multiline or block comments. You must start each line of a 
 multiline comment with #.
 3. Assigning a value to a nonexistent element of a vector, matrix, array, or list 
