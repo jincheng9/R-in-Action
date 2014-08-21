@@ -225,7 +225,7 @@ will expand that structure to accommodate the new value. For example, consider t
 x <- x[1:3] would shrink it back to three elements again.<br>
 4. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
 5. Indices in R start at 1, not at 0. <br>
-6. Variables cann't be declared. They come into existence on first assignment.
+6. Variables can't be declared. They come into existence on first assignment.
 
 Data Input Methods
 ------------------
