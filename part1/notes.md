@@ -242,9 +242,9 @@ or load package 'dplyr' later than package 'stats'
 [1] 8 6 4 NA NA NA 10
 ```
 x <- x[1:3] would shrink it back to three elements again.<br>
-4. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
-5. Indices in R start at 1, not at 0. <br>
-6. Variables can't be declared. They come into existence on first assignment.
+5. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
+6. Indices in R start at 1, not at 0. <br>
+7. Variables can't be declared. They come into existence on first assignment.
 
 Data Input Methods
 ------------------
