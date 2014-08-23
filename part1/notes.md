@@ -222,6 +222,9 @@ For example, A$x refers to variable x in data frame A
 multiline comment with #.
 3. Assigning a value to a nonexistent element of a vector, matrix, array, or list 
 will expand that structure to accommodate the new value. For example, consider the following:
+4. Pay attention to package priority: for example, the function filter() exists in both 
+package 'stats' and package 'dplyr', if we want to use the filter in dplyr, we need to use dplyr::filter()
+or load package 'dplyr' later than package 'stats'
 ```R
 > x <- c(8, 6, 4)
 > x[7] <- 10
