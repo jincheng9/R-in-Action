@@ -102,6 +102,9 @@ index2 <- match(e2, vec)
 e3 <- 1
 is_in <- !is.na(match(e3, vec))
 is_in <- e3 %in% vec
+# number of characters in a string
+x <- 'abc'
+num <- nchar(x)
 ```
 Matrix: two dimensional array
 ```R
