@@ -102,9 +102,19 @@ index2 <- match(e2, vec)
 e3 <- 1
 is_in <- !is.na(match(e3, vec))
 is_in <- e3 %in% vec
+
+# compute how many different numbers in a vector
+vec <- c(1, 2, 3, 2)
+nlevels(factor(vec)) # return 3
+
 # number of characters in a string
 x <- 'abc'
 num <- nchar(x)
+
+# string-integer conversion
+x <- 123
+x <- paste(x) # x is '123'
+x <- strtoi(x) # x is 123
 ```
 Matrix: two dimensional array
 ```R
