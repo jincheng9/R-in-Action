@@ -103,6 +103,15 @@ e3 <- 1
 is_in <- !is.na(match(e3, vec))
 is_in <- e3 %in% vec
 
+# the elements in vector c1, but not in vector c2
+c1 <- c(1, 2, 3)
+c2 <- c(2, 3, 5)
+c1[!(c1 %in% c2)] # 1
+setdiff(c1, c2) # 1
+
+c2[!(c2 %in% c1)] # 5
+setdiff(c2, c1) # 5
+
 # compute how many different numbers in a vector
 vec <- c(1, 2, 3, 2)
 nlevels(factor(vec)) # return 3
@@ -245,7 +254,7 @@ x <- x[1:3] would shrink it back to three elements again.<br>
 5. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
 6. Indices in R start at 1, not at 0. <br>
 7. Variables can't be declared. They come into existence on first assignment.
-
+	
 Data Input Methods
 ------------------
 1 Entering data from the keyboard
