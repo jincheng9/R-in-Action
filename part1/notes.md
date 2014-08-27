@@ -590,10 +590,10 @@ melt(data, id=(c('id', 'time'))), cast(md, id~variable, mean)
 
 Clustering in R
 ----------------------------------
-1. K-means
+1. K-means clustering
 ```R
 signal.return <- data.frame(signal.value, return.rate)
-kmeans.res <- kmeans(signal.return, 3)
+kmeans.res <- kmeans(signal.return, 3) # 3 clusters
 plot(signal.return, xaxt='n', yaxt='n', xlab='Signal Value', ylab='Return')
 axis(1, pos=0)
 axis(2, pos=0)
