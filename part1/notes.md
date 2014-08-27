@@ -581,9 +581,23 @@ mystats <- function(x, parametric=TRUE, print=FALSE) {
 ```
 4 Aggregation and restructuring <br>
 - aggregate(x, by, FUN) <br>
-x is the data objec to be collaplsed, by is a list of variables that will be crossed to form the 
+x is the data object to be collapsed, by is a list of variables that will be crossed to form the 
 new observations, and FUN is the scalar function used to calculate summary statistics that will 
 make up the new observation values.
 - reshape <br>
 install.packages('reshape'), library('reshape') <br>
 melt(data, id=(c('id', 'time'))), cast(md, id~variable, mean)
+
+Clustering in R
+----------------------------------
+1. K-means
+```R
+signal.return <- data.frame(signal.value, return.rate)
+kmeans.res <- kmeans(signal.return, 3)
+plot(signal.return, xaxt='n', yaxt='n', xlab='Signal Value', ylab='Return')
+axis(1, pos=0)
+axis(2, pos=0)
+abline(v=0, h=0)
+kmeans.cluster <- factor(kmeans.res$cluster)
+s.class(signal.return, fac=kmeans.cluster, add.plot=TRUE, col=seq(1, nlevels(kmeans.cluster), 1))
+```
