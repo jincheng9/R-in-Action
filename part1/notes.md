@@ -115,6 +115,7 @@ setdiff(c2, c1) # 5
 # compute how many different numbers in a vector
 vec <- c(1, 2, 3, 2)
 nlevels(factor(vec)) # return 3
+length(unique(vec)) # return 3
 
 # number of characters in a string
 x <- 'abc'
