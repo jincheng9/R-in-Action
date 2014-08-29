@@ -201,7 +201,7 @@ summary(mpg)
   plot(mpg, wt)
 detach(mtcars) # remove the data frame from the search path
 ```
-Factor: Categorical (nomial) and Categorical ordered (ordinal) variables
+Factor: Categorical (nominal) and Categorical ordered (ordinal) variables
 ```R
 # map categorical values as a vector of integers [1...k]
 diabetes <- c('Type1', 'Type2', 'Type1', 'Type1')
@@ -252,7 +252,7 @@ x <- x[1:3] would shrink it back to three elements again.<br>
 4. Pay attention to package priority: for example, the function filter() exists in both 
 package 'stats' and package 'dplyr', if we want to use the filter in dplyr, we need to use dplyr::filter()
 or load package 'dplyr' later than package 'stats'. <br>
-5. R doesn't have scalar values. Scalars are represented as one-element assignment.<br>
+5. R doesn't have scalar values. Scalars are represented as one-element vectors.<br>
 6. Indices in R start at 1, not at 0. <br>
 7. Variables can't be declared. They come into existence on first assignment.
 	
