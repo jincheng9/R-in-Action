@@ -501,6 +501,18 @@ newdf <- sq1df('select * from mtcars where carb=1 order by mpg', row.names=TRUE)
 newdf <- sqldf('select avg(mpg) as avg_mpg, avg(disp) as avg_disp, gear from mtcars where cyl in (4, 6) group by gear')
 ```
 
+10 Conversion between string and variable name <br>
+```R
+# string to variable name
+assign('test', 10) # same as test <- 10
+x <- 'test'
+assign(x, 5) # same as test <- 5
+
+# variable name to string
+x <- 5
+var.name <- deparse(substitute(x)) # var.name will be "x"
+```
+
 Advanced data management
 -------------------------------
 1 Numerical and character functions <br>
