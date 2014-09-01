@@ -404,7 +404,8 @@ interval <- difftime(dateX, dateY, units='weeks')
 t1 <- proc.time()
 code 
 t2 <- proc.time()
-time_elapsed <- as.numeric((t2-t1)[3])
+time_elapsed <- (t2-t1)[[3]] # the elapsed time
+time_elapsed <- as.numeric((t2-t1)[3]) # the elapsed time, the same as the above value
 ```
 
 6 Type conversion (page 84)<br>
