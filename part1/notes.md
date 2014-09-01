@@ -511,7 +511,7 @@ assign(x, 5) # same as test <- 5
 # variable name to string
 x <- 5
 var.name <- deparse(substitute(x)) # var.name will be "x"
-```
+```  
 
 Advanced data management
 -------------------------------
@@ -525,7 +525,7 @@ Advanced data management
    runif(): uniform distribution on the interval 0 to 1 <br>
    set.seed(5): set seed to make the results reproducible
 - Character functions<br>
-  nchar(x), substr(x, start, stop), grep(pattern, x, ignore.case=FALSE, fixed=FALSE) <br>
+  nchar(x), nzchar(x), substr(x, start, stop), grep(pattern, x, ignore.case=FALSE, fixed=FALSE) <br>
   sub(pattern, replacement, x, ignore.case=FALSE, fixed=FALSE), strsplit(x, split, fixed=FALSE) <br>
   paste(..., sep=""), toupper(x), tolower(x)
 - Other useful functions<br>
