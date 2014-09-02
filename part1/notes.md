@@ -256,7 +256,7 @@ or load package 'dplyr' later than package 'stats'. <br>
 6. Indices in R start at 1, not at 0. <br>
 7. Variables can't be declared. They come into existence on first assignment.
 	
-Data Input Methods
+Data Input/Output Methods
 ------------------
 1 Entering data from the keyboard
 
@@ -607,11 +607,12 @@ Clustering in R
 1. K-means clustering
 ```R
 signal.return <- data.frame(signal.value, return.rate)
-kmeans.res <- kmeans(signal.return, 3) # 3 clusters
+kmeans.res <- kmeans(signal.return, 3) # 3 clusters, give each observation a label
 plot(signal.return, xaxt='n', yaxt='n', xlab='Signal Value', ylab='Return')
 axis(1, pos=0)
 axis(2, pos=0)
 abline(v=0, h=0)
 kmeans.cluster <- factor(kmeans.res$cluster)
+# need to install package 'ade4' to visualize the clusters
 s.class(signal.return, fac=kmeans.cluster, add.plot=TRUE, col=seq(1, nlevels(kmeans.cluster), 1))
 ```
