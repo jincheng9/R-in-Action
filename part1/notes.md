@@ -25,6 +25,8 @@ i <- 10
 cat(i, "th interation...\n", sep="") # sep="" means that there is no space between the input parameters 
 # check the data structure of variables
 vec <- c(1:10)
+str(vec)
+# find the first 6 and last 6 elements
 head(vec)
 tail(vec)
 no <- c(1:3)
