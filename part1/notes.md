@@ -4,6 +4,9 @@ Part 1 Getting Started
 Managing the R Workspace
 ------------------
 ```R
+# help function in R, we can use help() to find doc for functions and objects
+help(kmeans) # give the explanation for kmeans clustering
+help(pi) # pi is 3.141593
 # get the current workspace directory 
 getwd()
 # set the workspace directory, case sensitive
