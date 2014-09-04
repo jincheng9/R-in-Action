@@ -164,6 +164,7 @@ status <- c('Poor', 'Improved', 'Excellent', 'Poor')
 patientdata <- data.frame(patientID, age, diabetes, status)
 x <- nrow(patientdata)
 y <- ncol(patientdata)
+size <- dim(patientdata) # size is a vector that has the number of rows and columns as its elements
 # get the ij-th element of a data.frame
 i <- 1
 j <- 2
