@@ -15,9 +15,7 @@ setwd()
 dir.create(foldername) 
 # run R script
 source('file.R') 
-# print the output to console
-source('file.R', print.eval=TRUE) 
-# or use print() to print anything you want to print to the console, for example 
+# use print() to print anything you want to print to the console, for example 
 a <- 2
 print(a)
 # print all commands to console
