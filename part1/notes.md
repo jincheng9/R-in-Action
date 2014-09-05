@@ -175,7 +175,13 @@ as.datatype(patientdata[i, ][j]) # patientdata[i, ] is  the ith row, a sub data 
 patientdata$age[i]
 patientdata[i, 'age']  # the ith row at 'age' column
 
-patientdata[1:2] # first 2 columns
+patientdata[2, ] # the second row
+patientdata[, 2] # the second column
+patientdata[, 'age'] # the age column
+patientdata$age # the age column
+patientdata[['age']] # the age column
+
+patientdata[1:2] # first 2 columns, still a data frame
 patientdata[c('diabetes', 'status')]
 patientdata$age
 table(patientdata$diabetes, patientdata$status)
