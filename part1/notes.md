@@ -175,6 +175,7 @@ as.datatype(patientdata[i, ][j]) # patientdata[i, ] is  the ith row, a sub data 
 patientdata$age[i]
 patientdata[i, 'age']  # the ith row at 'age' column
 
+# get the row and column of data.frame
 patientdata[2, ] # the second row
 patientdata[, 2] # the second column
 patientdata[, 'age'] # the age column
