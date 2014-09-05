@@ -318,7 +318,7 @@ legend('topleft', legend=c('line 1', 'line 2'), col=c('red', 'green'), lwd=1, bt
 
 # plot a function
 f <- function(x) {
-	x*sin(x);
+	x*sin(x)
 }
 plot(f, -20*pi, 20*pi)
 ```
