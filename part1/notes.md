@@ -354,14 +354,14 @@ mydata <- data.frame(x1 = c(2, 2, 6, 4),
 # gernerally we have three methods
 
 # method 1
-#mydata$sumx <-  mydata$x1 + mydata$x2
-#mydata$meanx <- (mydata$x1 + mydata$x2)/2
+mydata$sumx <-  mydata$x1 + mydata$x2
+mydata$meanx <- (mydata$x1 + mydata$x2)/2
 
 # method 2
-#attach(mydata)
-#mydata$sumx <-  x1 + x2
-#mydata$meanx <- (x1 + x2)/2
-#detach(mydata)
+attach(mydata)
+mydata$sumx <-  x1 + x2
+mydata$meanx <- (x1 + x2)/2
+detach(mydata)
 
 # method 3
 mydata <- transform(mydata, sumx = x1 + x2, meanx = (x1+x2)/2)
@@ -385,9 +385,9 @@ mydata <- within(mydata, {
 3 renaming variables
 ```R
 rename(dataframe, c(oldname1="newname1", oldname2="newname2",...))
-#names[dataframe] returns the variable names of the data frame as a vector
+#names(dataframe) returns the variable names of the data frame as a vector
 names(dataframe)[2] <- "newname"
-# or use fix(datafrmae) to rename variables in GUI
+# or use fix(dataframe) to rename variables in GUI
 ```
 4 missing values
 ```r
