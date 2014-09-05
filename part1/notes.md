@@ -176,11 +176,12 @@ patientdata$age[i]
 patientdata[i, 'age']  # the ith row at 'age' column
 
 # get the row and column of data.frame
-patientdata[2, ] # the second row
-patientdata[, 2] # the second column
-patientdata[, 'age'] # the age column
-patientdata$age # the age column
-patientdata[['age']] # the age column
+patientdata[2, ] # the second row, a data.frame
+patientdata[, 2] # the second column, a vector
+patientdata[, 'age'] # the age column, a vector
+patientdata$age # the age column, a vector
+patientdata[['age']] # the age column, a vector
+patientdata['age'] # the age column, a data.frame
 
 patientdata[1:2] # first 2 columns, still a data frame
 patientdata[c('diabetes', 'status')]
