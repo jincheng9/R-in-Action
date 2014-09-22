@@ -19,5 +19,8 @@ plot(density(x), col='red', xlim=c(xmin, xmax), ylim=c(ymin, ymax))
 Basic Statistics
 ------------------
 ```R
-
+# correlation between two variables
+x <- c(1, 2, 3)
+y <- c(4, 5, 6)
+cor(x, y)
 ```
