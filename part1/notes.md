@@ -42,6 +42,7 @@ x <- c(1,2)
 rm(x)
 # remove all variables in the workspace
 rm(list=ls(all=T))
+rm(list=ls(pattern='^tmp')) # remove the variables with names begin with 'tmp'
 ```
 Common Mistakes in R
 -----------------------------
