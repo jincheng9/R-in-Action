@@ -125,6 +125,10 @@ length(unique(vec)) # return 3
 x <- 'abc'
 num <- nchar(x)
 
+# find position of character in a string
+loc <- gregexpr(pattern='\"', "abc\"defg") # \" is a single character, loc is a list
+cat('the character position is: ', loc[[1]][1], '\n')
+
 # string-integer conversion
 x <- 123
 x <- paste(x) # x is '123'
